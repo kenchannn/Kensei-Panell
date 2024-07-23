@@ -1,0 +1,136 @@
+# ═══════════════
+# Have Fun!
+# ═══════════════
+#
+# ColorCodes can be used as normal. (&a,&1, .....)
+#
+# !!! If you insert values with special characters then you have to check if quotes exists! If not then you can add ' manually before and after the value.
+# exampleQUOTES: ':, {, }, [, ], ,, &, *, #, ?, |, -, <, >, =, !, %, @, \, all others'
+#
+# Linebreaks can be done if you quote the value with " and use \n where you want a linebreak.
+# exampleLinebreak: "Some stuff here. \nSome stuff there"
+#
+
+# You should not disable this if you have no problems with it. It keeps the config up to date!
+# If you have any problems with it then contact Cerexus#1348 on Discord!
+automatic_config_updater: true
+
+use_permissions: false
+home_limit: 100
+command_cooldown_home: 0
+teleport_delay: 0
+teleport_delay_check_movement: true
+updatecheck_daily: true
+updatecheck_operators_notify: true
+updatecheck_entitled_notify: true
+home_tab_complete: true
+deactivate_homes_over_limit: false
+support_essentialsx_command_back: false
+teleport_sound: true
+teleport_particle: true
+
+#If you have more groups with home limits and you want them to sum up then you should enable this.
+count_home_permission_limit_together: false
+
+Database:
+  SQLite: true
+    # Only use MySQL if you want bungeecord support! No migration between SQLite and MySQL possible currently (AND it don`t makes sense to do that)!
+  MySQL_only_for_bungee:
+    enabled: false
+        #Please read the headline if you have special characters here!
+    host: 127.0.0.1
+    port: 3306
+    username: ''
+    password: ''
+    database: ''
+    table_prefix: ''
+
+Commands:
+  command_home: home
+  command_homes: homes
+  command_sethome: sethome
+  command_removehome: removehome
+  command_updatehome: updatehome
+
+Messages:
+  prefix: '&7[&aUltra&bSetHome&7] '
+  no_primary_home: '&eBạn không có home chính.'
+  no_home: '&eBạn không có home.'
+  home_not_found: '&eBạn không có home với tên đó.'
+  home_location_changed: '&eBạn đã thành công thay đổi vị trí của home.'
+  home_location_change_not_possible_here: '&eBạn không thể thay đổi vị trí home đến
+    vị trí này.'
+  home_location_set_not_possible_here: '&eBạn không thể đặt home ở đây.'
+  plugin_disabled_here: '&eBạn không thể sử dụng UltraSetHome ở đây.'
+  symbol_changed: '&eBiểu tượng đã thay đổi thành công.'
+  no_valid_name: '&cĐây không phải là một tên hợp lệ.'
+  home_location_set: '&eBạn đã thành công đặt home.'
+  home_deleted: '&aHome đã bị xóa.'
+  home_delete_canceled: '&cXóa đã bị hủy.'
+  home_teleported: '&aBạn đã được di chuyển.'
+  home_reached_limit: '&cBạn đã đạt đến giới hạn.'
+  home_deactivated: '&cHome này đã bị vô hiệu hóa!'
+  home_set_primary: '&aĐã thay đổi home chính của bạn.'
+#placeholders: {seconds}
+  cooldown_message: '&eBạn phải đợi &9{seconds} &egiây.'
+  corrupted: '&cHome này bị hỏng! Hãy thử thay đổi vị trí.'
+  no_permissions: '&cBạn không có quyền thực hiện điều này!'
+  no_home_other: '&cNgười chơi này không có bất kỳ home nào.'
+  error_fetching_uuid: '&cCó lỗi khi lấy uuid của người chơi. Tên này không tồn tại
+    hoặc API Minecraft tạm thời không khả dụng.'
+#placeholders: {seconds}
+  delayed_teleport: '&7Đang di chuyển trong {seconds}s... đừng di chuyển!'
+  delayed_teleport_already_in_progress: '&cĐang diễn ra một lần di chuyển khác!'
+  delayed_teleport_cancel_movement: '&cQuá trình di chuyển đã bị hủy! Bạn đã di chuyển!'
+  no_number: '&cĐây không phải là một số hợp lệ.'
+  added_extra_home: '&aThêm home phụ thành công.'
+  removed_extra_home: '&aXóa home phụ thành công.'
+  set_extra_home: '&aThiết lập home phụ thành công.'
+#placeholders: {player}, {total_homes}, {extra_homes}
+  info_homes: '&9{player} &acó tới &9{total_homes} &ahomes và có thể tạo thêm &9{extra_homes}
+    &ahome phụ vượt quá giới hạn (điều này cũng áp dụng cho giới hạn theo quyền).'
+  dupplicate_name: '&eĐã có home với tên đó.'
+  bungeecord_server_offline: '&eServer của home này đã tắt.'
+
+Gui:
+  gui_overview: '&eTổng quan'
+  gui_overview_unnamed: '&7chưa đặt tên'
+  gui_overview_named: '&5'
+  gui_overview_placeholder: '&8&l______________________'
+  gui_overview_left_click: '&eNhấp chuột trái &bđể di chuyển!'
+  gui_overview_corrupted: '&cHỏng! Thay đổi vị trí.'
+  gui_overview_right_click: '&eNhấp chuột phải &bđể điều chỉnh!'
+  gui_overview_bedrock_click: '&eNhấp &bđể điều chỉnh!'
+  gui_overview_back: '&atrở lại'
+  gui_overview_forth: '&atiến tới'
+  gui_settings: '&eCài đặt'
+  gui_settings_location_change: '&eThay đổi vị trí'
+  gui_settings_location_change_description: '&eThay đổi vị trí của home.'
+  gui_settings_symbol_change: '&eThay đổi biểu tượng'
+  gui_settings_symbol_change_description: '&eThay đổi biểu tượng của home.'
+  gui_settings_home_delete: '&eXóa home'
+  gui_settings_home_delete_description: '&eXóa home của bạn.'
+  gui_settings_home_delete_confirm: '&aXác nhận xóa'
+  gui_settings_home_delete_confirm_description: '&cHành động này không thể hoàn tác.'
+  gui_settings_home_delete_cancel: '&cHủy xóa'
+  gui_settings_home_delete_cancel_description: '&cHủy xóa home.'
+  gui_settings_set_primary: '&aĐặt làm chính'
+  gui_settings_set_primary_description: '&aĐặt home này làm home chính.'
+  gui_settings_bedrock_click: '&eNhấp &bđể di chuyển!'
+  gui_overview_primary: '&aHome chính của bạn.'
+  gui_home_deactivated: '&cbị vô hiệu hóa'
+#placeholders: {player}
+  gui_overview_other: '&e{player}'
+  gui_overview_information_title: '&eThông tin'
+#placeholders: {total_homes}, {max_homes}, {extra_homes}, {homes_left}
+  gui_overview_information_lore:
+    - '&3tổng số home: &b{total_homes}'
+    - '&3số home tối đa: &b{max_homes}'
+    - '&3home phụ: &b{extra_homes}'
+    - '&3còn lại: &b{homes_left}'
+  gui_overview_information_player_offline: §cngười chơi ngoại tuyến
+
+acf-core:
+#placeholders: {command}, {syntax}
+  invalid_syntax: '&7[&aUltra&bSetHome&7] &eSử dụng: &a{command} {syntax}'
+  unknown_command: '&7[&aUltra&bSetHome&7] &cLệnh không xác định.'

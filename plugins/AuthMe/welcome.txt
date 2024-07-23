@@ -1,0 +1,2 @@
+Chào mừng {PLAYER} đến với server Sinh tồn của kensei nhé!
+Bạn đã được bảo vệ bởi plugins Authme!
